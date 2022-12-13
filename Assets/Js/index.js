@@ -45,11 +45,5 @@ jQuery(document).ready(function($) {
     });
 })
 
-// Testimonial Splide
-var splide = new Splide( '.splide', {
-    type   : 'loop',
-    perPage: 3,
-    perMove: 1,
-  } );
-  
-  splide.mount();
+// Owl Carousel
+// $(".owl-carousel").owlCarousel();

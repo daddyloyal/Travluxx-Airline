@@ -317,20 +317,48 @@ span .text-warning {
 /* End */
 
 /* Card Section */
-.feature-one {
-    width: 350px;
+@media (min-width: 992px) {
+    .feature-one {
+        width: 350px;
+    }   
+    .ui-card {
+        width: 350px;
+        background: radial-gradient(#111 50%, #000 100%);
+        overflow: hidden;
+        position: relative;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .feature-one {
+        width: 700px;
+        padding: 50px 30px !important;
+        margin-bottom: 30px;
+    }
+    .ui-card {
+        width: 700px;
+        margin-bottom: 20px;
+        background: radial-gradient(#111 50%, #000 100%);
+        overflow: hidden;
+        position: relative;
+    }
+    
+}
+@media screen and (max-width: 576px) {
+    .ui-card {
+        width: 350px;
+        margin-bottom: 20px;
+        background: radial-gradient(#111 50%, #000 100%);
+        overflow: hidden;
+        position: relative;
+    }
 }
 .card-img {
     max-width: 100%;
+    height: auto;
     display: block;
     
 }
-.ui-card {
-    width: 350px;
-    background: radial-gradient(#111 50%, #000 100%);
-    overflow: hidden;
-    position: relative;
-}
+
 .ui-card img {
     transform: scale(1.3);
     transition: var(--transition);
@@ -475,9 +503,9 @@ li {
 }
 .testimonial-one__icon-box {
     position: absolute;
-    top: 30%;
-    right: -27px;
-    transform: translateY(-50%);
+    bottom: 5%;
+    right: -2.5%;
+    /* transform: translateY(-50%); */
 }
 .testimonial-one__icon-box span {
     position: relative;
@@ -485,11 +513,12 @@ li {
     align-items: center;
     justify-content: center;
     font-size: 32px;
-    width: 67px;
-    height: 67px;
+    width: 47px;
+    height: 47px;
     background-color: var(--warning-color);
     border-radius: 50%;
     color: var(--light-color);
+    border: 4px solid white;
 }
 .testimonial-one__client-img-box {
     position: relative;
@@ -503,7 +532,42 @@ li {
 .rate-icon {
     font-size: 13px;
 }
-@media (max-width: 576px) {
-    
+
+/* Owl Carousel */
+.owl-prev {
+    left: -0px;
+}
+.owl-next {
+    right: -0px;
+}
+.owl-prev, .owl-next {
+    position: absolute;
+    top: 65px;
+}
+.owl-prev span, .owl-next span {
+    font-size: 80px;
+    color: var(--warning-color);
+}
+.owl-theme, .owl-nav[class*="owl-"]:hover {
+    padding: 10px 35px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .testimonial-one__client-img-box {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: fit-content;
+        margin: 10px auto;
+    }
+    .testimonial-img {
+        width: 50%;
+        border-radius: 50%; 
+    }
+    .testimonial-one__content-text{
+        line-height: 1.3em !important;
+        font-size: 16px !important;
+    }
 }
 /* End of testimonial */
